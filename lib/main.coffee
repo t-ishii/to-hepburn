@@ -3,7 +3,7 @@ ToHepburn = null
 
 module.exports = Main =
   config:
-    'programming':
+    'programmingStyle':
       type: 'boolean'
       default: true
 
