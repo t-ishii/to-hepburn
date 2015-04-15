@@ -1,0 +1,22 @@
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'To hepburn'
+      'submenu': [
+        { label: 'Convert', command: 'to-hepburn:convert' }
+        { label: 'Convert All', command: 'to-hepburn:convert-all' }
+      ]
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'To hepburn'
+      'submenu': [
+        { label: 'Convert', command: 'to-hepburn:convert' }
+        { label: 'Convert All', command: 'to-hepburn:convert-all' }
+      ]
+    ]
+  }
+]
