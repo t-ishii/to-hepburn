@@ -2,7 +2,7 @@
   "name": "to-hepburn",
   "main": "./lib/main",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "かな文字 to ヘボン式(kana to hepburn)",
   "repository": "https://github.com/atom/to-hepburn",
   "license": "MIT",
   "engines": {
