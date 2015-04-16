@@ -1,7 +1,7 @@
 {
   "name": "to-hepburn",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "かな文字 to ヘボン式(kana to hepburn)",
   "repository": "https://github.com/t-ishii/to-hepburn",
   "license": "MIT",
