@@ -3,7 +3,7 @@
     {
       'label': 'To hepburn'
       'submenu': [
-        { label: 'Convert', command: 'to-hepburn:convert' }
+        { label: 'Convert Selected', command: 'to-hepburn:convert' }
         { label: 'Convert All', command: 'to-hepburn:convert-all' }
       ]
     }
@@ -14,7 +14,7 @@
     'submenu': [
       'label': 'To hepburn'
       'submenu': [
-        { label: 'Convert', command: 'to-hepburn:convert' }
+        { label: 'Convert Selected', command: 'to-hepburn:convert' }
         { label: 'Convert All', command: 'to-hepburn:convert-all' }
       ]
     ]
