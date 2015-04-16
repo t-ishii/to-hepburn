@@ -7,14 +7,7 @@ class ToHepburn
 
   convert: (@editor=atom.workspace.getActiveTextEditor()) ->
     return if not @editor?
-
-    @editor.mutateSelectedText (selection) =>
-      if not selection.isEmpty()
-        config = @getHepburnConfig()
-        text = selection.getText()
-        selection.delete()
-        selection.insertText(text)
-
+    @replaceSelectedKana()
     return
 
   convertAll: (@editor=atom.workspace.getActiveTextEditor()) ->
@@ -22,8 +15,27 @@ class ToHepburn
     @replaceAllKana(@editor.buffer)
     return
 
-  replaceAllKana: (buf) ->
+  replaceSelectedKana: () ->
+
     config = @getHepburnConfig()
+
+    @editor.mutateSelectedText (selection) =>
+
+      if not selection.isEmpty()
+
+        text = selection.getText()
+        selection.delete()
+        selection.insertText(
+          text.replace(
+            @kana, (str) ->
+              japanese.romanize(str, config)
+          )
+        )
+
+  replaceAllKana: (buf) ->
+
+    config = @getHepburnConfig()
+
     buf.transact =>
       buf.scan @kana, ({replace, matchText}) ->
         replace(japanese.romanize(matchText, config))
